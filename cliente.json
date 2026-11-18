@@ -1,0 +1,1018 @@
+{
+ "$schema": "https://raw.githubusercontent.com/AlejoMFernandez/kit-demos/main/docs/cliente.schema.json",
+ "id": "granero",
+ "nombre": "Granero · Cocina & Grill",
+ "pais": "AR",
+ "idioma": "es",
+ "zonaHoraria": "America/Argentina/Buenos_Aires",
+ "modo": "demo",
+ "whatsapp": "5491161837401",
+ "instagram": "granero_milberg",
+ "prefijoPedido": "GR",
+ "supabase": {
+  "url": "",
+  "anonKey": ""
+ },
+ "marca": {
+  "logo": "img/logo-oscuro.webp",
+  "logoPanel": "img/logo-claro.webp",
+  "favicon": "img/favicon.png",
+  "logoClaro": "img/logo-claro.webp",
+  "isotipo": "img/granero-oscuro.webp",
+  "colores": {
+   "fondo": "#F1E8DA",
+   "superficie": "#FBF6EE",
+   "texto": "#1B1816",
+   "primario": "#9A3A33",
+   "sobrePrimario": "#FFFFFF",
+   "acento": "#E58A2A",
+   "sobreAcento": "#1B1816",
+   "borde": "#1B1816",
+   "suave": "#5E544C"
+  },
+  "fuentes": {
+   "titulos": "'Oswald', 'Arial Narrow', sans-serif",
+   "texto": "'Karla', system-ui, sans-serif",
+   "googleFonts": "",
+   "css": "css/fuentes.css"
+  },
+  "estilo": {
+   "forma": "recta",
+   "radio": "0px",
+   "sombra": "ninguna",
+   "borde": "2px",
+   "mayusculas": true
+  }
+ },
+ "modulos": {
+  "carta": true,
+  "cartaQR": true,
+  "carrito": true,
+  "reservas": true,
+  "admin": true
+ },
+ "horarios": {
+  "lun": [],
+  "mar": [
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "mie": [
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "jue": [
+   [
+    "12:00",
+    "00:00"
+   ]
+  ],
+  "vie": [
+   [
+    "12:00",
+    "01:00"
+   ]
+  ],
+  "sab": [
+   [
+    "12:00",
+    "01:00"
+   ]
+  ],
+  "dom": [
+   [
+    "12:00",
+    "01:00"
+   ]
+  ]
+ },
+ "reservas": {
+  "intervaloMin": 30,
+  "duracionMin": 120,
+  "capacidad": 120,
+  "maxPersonas": 14,
+  "anticipacionMin": 60,
+  "diasAdelante": 30,
+  "ultimoTurnoMin": 90
+ },
+ "pedidos": {
+  "salidas": [
+   "whatsapp"
+  ],
+  "tipos": [
+   "retiro"
+  ],
+  "minimo": 0,
+  "encargo": {
+   "anticipacionHoras": 168,
+   "diasAdelante": 180,
+   "franjas": [
+    {
+     "id": "mediodia",
+     "nombre": "Mediodía",
+     "desde": "12:00",
+     "hasta": "16:00"
+    },
+    {
+     "id": "noche",
+     "nombre": "Noche",
+     "desde": "20:00",
+     "hasta": "00:00"
+    }
+   ]
+  }
+ },
+ "pagos": {
+  "mercadopago": {
+   "endpoint": "https://kit-demos-amf.vercel.app/api/mp-preference",
+   "modo": "sandbox"
+  }
+ },
+ "carta": {
+  "categorias": [
+   {
+    "id": "entradas",
+    "nombre": "Entradas",
+    "orden": 0
+   },
+   {
+    "id": "huerta",
+    "nombre": "De la huerta",
+    "orden": 1
+   },
+   {
+    "id": "quebracho",
+    "nombre": "Al quebracho",
+    "orden": 2
+   },
+   {
+    "id": "estaca",
+    "nombre": "A la estaca · 8 horas",
+    "orden": 3
+   },
+   {
+    "id": "cocina",
+    "nombre": "Cocina",
+    "orden": 4
+   },
+   {
+    "id": "pastas",
+    "nombre": "Pastas caseras",
+    "orden": 5
+   },
+   {
+    "id": "guarniciones",
+    "nombre": "Acompañamientos",
+    "orden": 6
+   },
+   {
+    "id": "sobremesa",
+    "nombre": "Sobremesa",
+    "orden": 7
+   },
+   {
+    "id": "cocteles",
+    "nombre": "Cócteles de autor",
+    "orden": 8
+   },
+   {
+    "id": "sinalcohol",
+    "nombre": "Sin alcohol",
+    "orden": 9
+   },
+   {
+    "id": "cervezas",
+    "nombre": "Cervezas y aperitivos",
+    "orden": 10
+   },
+   {
+    "id": "eventos",
+    "nombre": "Eventos en el granero",
+    "orden": 11,
+    "anticipacionHoras": 168,
+    "tienda": true
+   }
+  ],
+  "productos": [
+   {
+    "id": "empanada",
+    "categoria": "entradas",
+    "nombre": "Empanada de carne frita",
+    "descripcion": "",
+    "precio": 8000,
+    "orden": 0
+   },
+   {
+    "id": "chorizo-cerdo",
+    "categoria": "entradas",
+    "nombre": "Chorizo de cerdo y morrones",
+    "descripcion": "",
+    "precio": 9000,
+    "orden": 1
+   },
+   {
+    "id": "morcilla",
+    "categoria": "entradas",
+    "nombre": "Morcilla, ananá grillado",
+    "descripcion": "Con hinojos encurtidos.",
+    "precio": 9000,
+    "orden": 2
+   },
+   {
+    "id": "salchicha-tandil",
+    "categoria": "entradas",
+    "nombre": "Salchicha parrillera de Tandil",
+    "descripcion": "Criolla de mango y pimientos.",
+    "precio": 10000,
+    "orden": 3
+   },
+   {
+    "id": "tartar",
+    "categoria": "entradas",
+    "nombre": "Tartar Angus de bife angosto",
+    "descripcion": "Sobre el hueso y su tuétano asado, hojas de romero ahumadas.",
+    "precio": 25000,
+    "foto": "img/carta/tartar.webp",
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 4
+   },
+   {
+    "id": "jamon",
+    "categoria": "entradas",
+    "nombre": "Jamón español 18 meses",
+    "descripcion": "Pan de campo y manteca trufada.",
+    "precio": 33000,
+    "orden": 5
+   },
+   {
+    "id": "provoleta",
+    "categoria": "entradas",
+    "nombre": "Provoleta “Natalio Alba”",
+    "descripcion": "Pesto de albahaca y tomates secos.",
+    "precio": 19000,
+    "orden": 6
+   },
+   {
+    "id": "camembert",
+    "categoria": "entradas",
+    "nombre": "Camembert tibio flambeado",
+    "descripcion": "En reducción de miel, dátiles y cognac.",
+    "precio": 21000,
+    "orden": 7
+   },
+   {
+    "id": "berenjena",
+    "categoria": "entradas",
+    "nombre": "Berenjena ahumada a la parmesana",
+    "descripcion": "Con pomodoro.",
+    "precio": 14000,
+    "foto": "img/carta/berenjena.webp",
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 8
+   },
+   {
+    "id": "mollejas",
+    "categoria": "entradas",
+    "nombre": "Mollejas grilladas",
+    "descripcion": "Puré de boniato y naranjas, papas pay.",
+    "precio": 44000,
+    "orden": 9
+   },
+   {
+    "id": "tortilla",
+    "categoria": "entradas",
+    "nombre": "Tortilla de papa",
+    "descripcion": "Alioli de cebolla caramelizada, gel de morrón asado, crumble de chorizo colorado.",
+    "precio": 24000,
+    "orden": 10
+   },
+   {
+    "id": "ens-granja",
+    "categoria": "huerta",
+    "nombre": "De granja",
+    "descripcion": "Huevo a 63°, distintas lechugas, escamas de parmesano, zanahorias fritas, pollo confitado y aderezo del granero.",
+    "precio": 25000,
+    "orden": 11
+   },
+   {
+    "id": "ens-francesa",
+    "categoria": "huerta",
+    "nombre": "Francesa",
+    "descripcion": "Endivias, queso azul, espinacas frescas, peras asadas, garrapiñada de nuez, vinagreta de mostaza antigua.",
+    "precio": 25000,
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 12
+   },
+   {
+    "id": "ens-granero",
+    "categoria": "huerta",
+    "nombre": "Granero",
+    "descripcion": "Carpaccio de trucha ahumada, hojas verdes, mango, semillas de sésamo, leche de tigre.",
+    "precio": 32000,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 13
+   },
+   {
+    "id": "ens-norte",
+    "categoria": "huerta",
+    "nombre": "Norte",
+    "descripcion": "Remolacha asada, kale crocante, naranja a vivo, hinojo fresco, queso de cabra, emulsión de coco y curry.",
+    "precio": 27000,
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 14
+   },
+   {
+    "id": "ens-printemps",
+    "categoria": "huerta",
+    "nombre": "Printemps",
+    "descripcion": "Tomates orgánicos, palta, choclo, cebolla morada, huevos de codorniz, oliva cítrico.",
+    "precio": 28000,
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 15
+   },
+   {
+    "id": "ens-tierra",
+    "categoria": "huerta",
+    "nombre": "Tierra",
+    "descripcion": "Chauchas rollizas frescas, papines andinos, huevo hervido, portobellos grillados.",
+    "precio": 23000,
+    "foto": "img/carta/tierra.webp",
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 16
+   },
+   {
+    "id": "ens-variedad",
+    "categoria": "huerta",
+    "nombre": "Variedad de la huerta",
+    "descripcion": "A elección: hojas verdes, tomates, cebolla, choclo, pepino, rabanitos, rúcula, parmesano o zanahoria.",
+    "precio": 19000,
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 17
+   },
+   {
+    "id": "vacio-fino",
+    "categoria": "quebracho",
+    "nombre": "Vacío del fino · 400 g",
+    "descripcion": "",
+    "precio": 63000,
+    "orden": 18
+   },
+   {
+    "id": "chuleton",
+    "categoria": "quebracho",
+    "nombre": "Chuletón de ojo de bife · 800 g",
+    "descripcion": "Para 2 comensales.",
+    "precio": 87000,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 19
+   },
+   {
+    "id": "ceja-ojo",
+    "categoria": "quebracho",
+    "nombre": "Ceja de ojo de bife · 400 g",
+    "descripcion": "",
+    "precio": 70000,
+    "orden": 20
+   },
+   {
+    "id": "ojo-bife",
+    "categoria": "quebracho",
+    "nombre": "Ojo de bife · 400 g",
+    "descripcion": "",
+    "precio": 67000,
+    "orden": 21
+   },
+   {
+    "id": "bife-chorizo",
+    "categoria": "quebracho",
+    "nombre": "Bife de chorizo · 500 g",
+    "descripcion": "",
+    "precio": 62000,
+    "orden": 22
+   },
+   {
+    "id": "lomo",
+    "categoria": "quebracho",
+    "nombre": "Lomo tournedos",
+    "descripcion": "",
+    "precio": 64000,
+    "orden": 23
+   },
+   {
+    "id": "asado-centro",
+    "categoria": "quebracho",
+    "nombre": "Asado del centro · 5 costillas",
+    "descripcion": "Parejas y carnosas: carne, grasa y hueso en equilibrio.",
+    "precio": 62000,
+    "foto": "img/carta/asado-centro.webp",
+    "orden": 24
+   },
+   {
+    "id": "entrana",
+    "categoria": "quebracho",
+    "nombre": "Entraña de novillo",
+    "descripcion": "",
+    "precio": 68000,
+    "orden": 25
+   },
+   {
+    "id": "vacio-estaca",
+    "categoria": "estaca",
+    "nombre": "Vacío de novillo",
+    "descripcion": "Cocción lenta a la estaca, 8 horas.",
+    "precio": 63000,
+    "orden": 26
+   },
+   {
+    "id": "costilla-estaca",
+    "categoria": "estaca",
+    "nombre": "Costilla de novillo",
+    "descripcion": "Cocción lenta a la estaca, 8 horas.",
+    "precio": 67000,
+    "orden": 27
+   },
+   {
+    "id": "matambrito",
+    "categoria": "estaca",
+    "nombre": "Matambrito de cerdo",
+    "descripcion": "",
+    "precio": 42000,
+    "orden": 28
+   },
+   {
+    "id": "pollo-limon",
+    "categoria": "estaca",
+    "nombre": "Pollo de granja al limón",
+    "descripcion": "",
+    "precio": 35000,
+    "orden": 29
+   },
+   {
+    "id": "hamburguesa",
+    "categoria": "cocina",
+    "nombre": "Hamburguesa de asado",
+    "descripcion": "Provoleta, cebolla caramelizada, tomates, mayonesa de huevo frito, papas rejilla.",
+    "precio": 34000,
+    "orden": 30
+   },
+   {
+    "id": "risotto",
+    "categoria": "cocina",
+    "nombre": "Risotto azafranado",
+    "descripcion": "Langostinos, tomates secos, limones encurtidos.",
+    "precio": 49000,
+    "orden": 31
+   },
+   {
+    "id": "cochinillo",
+    "categoria": "cocina",
+    "nombre": "Cochinillo deshuesado",
+    "descripcion": "Hinojos asados, puré de batatas cremoso.",
+    "precio": 62000,
+    "foto": "img/carta/cochinillo.webp",
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 32
+   },
+   {
+    "id": "pesca-dia",
+    "categoria": "cocina",
+    "nombre": "Pesca blanca del día",
+    "descripcion": "Consultá la recomendación de nuestro cocinero.",
+    "precio": 47000,
+    "orden": 33
+   },
+   {
+    "id": "trucha",
+    "categoria": "cocina",
+    "nombre": "Trucha fresca patagónica",
+    "descripcion": "",
+    "precio": 48000,
+    "orden": 34
+   },
+   {
+    "id": "carbonara",
+    "categoria": "pastas",
+    "nombre": "Fettuccine al huevo a la auténtica carbonara",
+    "descripcion": "",
+    "precio": 29000,
+    "orden": 35
+   },
+   {
+    "id": "noquis-semola",
+    "categoria": "pastas",
+    "nombre": "Ñoquis de sémola romanos gratinados",
+    "descripcion": "Crema de espinaca, champiñones sellados y albahaca.",
+    "precio": 32000,
+    "foto": "img/carta/noquis.webp",
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 36
+   },
+   {
+    "id": "lasagna",
+    "categoria": "pastas",
+    "nombre": "Auténtica lasagna a la bolognese",
+    "descripcion": "",
+    "precio": 32000,
+    "orden": 37
+   },
+   {
+    "id": "raviolini",
+    "categoria": "pastas",
+    "nombre": "Raviolini de espinaca, ricota y Reggiano",
+    "descripcion": "En estofado de picaña y pomodoro.",
+    "precio": 34000,
+    "orden": 38
+   },
+   {
+    "id": "canelones",
+    "categoria": "pastas",
+    "nombre": "Canelones de cordero patagónico",
+    "descripcion": "Con espinacas de la huerta, pomodoro y crema, gratinados. Consultá la versión para celíacos con harina de arroz.",
+    "precio": 39000,
+    "orden": 39
+   },
+   {
+    "id": "fuccille",
+    "categoria": "pastas",
+    "nombre": "Fuccille fierrito tricolor",
+    "descripcion": "Pesto de albahaca y frutos secos, cherrys asados, burrata fresca.",
+    "precio": 34000,
+    "foto": "img/carta/fuccille.webp",
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 40
+   },
+   {
+    "id": "arroz",
+    "categoria": "guarniciones",
+    "nombre": "Arroz basmati, castañas y cranberries",
+    "descripcion": "",
+    "precio": 14000,
+    "orden": 41
+   },
+   {
+    "id": "vegetales",
+    "categoria": "guarniciones",
+    "nombre": "Vegetales grillados al quebracho",
+    "descripcion": "",
+    "precio": 12000,
+    "etiquetas": [
+     "veggie"
+    ],
+    "orden": 42
+   },
+   {
+    "id": "pure-papines",
+    "categoria": "guarniciones",
+    "nombre": "Puré de papa cremoso y papines al hierro",
+    "descripcion": "",
+    "precio": 10000,
+    "orden": 43
+   },
+   {
+    "id": "papas-fritas",
+    "categoria": "guarniciones",
+    "nombre": "Papas fritas",
+    "descripcion": "",
+    "precio": 9000,
+    "orden": 44
+   },
+   {
+    "id": "zapallo",
+    "categoria": "guarniciones",
+    "nombre": "Puré de zapallo y cuña de calabaza",
+    "descripcion": "",
+    "precio": 11000,
+    "orden": 45
+   },
+   {
+    "id": "papas-rejilla",
+    "categoria": "guarniciones",
+    "nombre": "Papas rejilla",
+    "descripcion": "Parmesano rallado y pimentón ahumado.",
+    "precio": 12000,
+    "orden": 46
+   },
+   {
+    "id": "boniatos",
+    "categoria": "guarniciones",
+    "nombre": "Boniatos al horno de barro",
+    "descripcion": "Queso azul y nueces caramelizadas.",
+    "precio": 13000,
+    "orden": 47
+   },
+   {
+    "id": "espinacas",
+    "categoria": "guarniciones",
+    "nombre": "Espinacas a la crema y parmesano",
+    "descripcion": "Gratinadas.",
+    "precio": 13000,
+    "orden": 48
+   },
+   {
+    "id": "papas-gratin",
+    "categoria": "guarniciones",
+    "nombre": "Papas gratín",
+    "descripcion": "Lluvia de crema y queso sardo, gratinadas al horno de barro.",
+    "precio": 16000,
+    "foto": "img/carta/gratin.webp",
+    "orden": 49
+   },
+   {
+    "id": "carro-quesos",
+    "categoria": "sobremesa",
+    "nombre": "Carro de quesos y dulces regionales de autor",
+    "descripcion": "",
+    "precio": 38000,
+    "orden": 50
+   },
+   {
+    "id": "cafe",
+    "categoria": "sobremesa",
+    "nombre": "Café Nespresso y petit fours",
+    "descripcion": "",
+    "precio": 5500,
+    "orden": 51
+   },
+   {
+    "id": "te-calendula",
+    "categoria": "sobremesa",
+    "nombre": "Té negro con flores de caléndula",
+    "descripcion": "",
+    "precio": 5000,
+    "orden": 52
+   },
+   {
+    "id": "infusiones",
+    "categoria": "sobremesa",
+    "nombre": "Tilo, cedrón, manzanilla o lemongrass",
+    "descripcion": "",
+    "precio": 5000,
+    "orden": 53
+   },
+   {
+    "id": "postres",
+    "categoria": "sobremesa",
+    "nombre": "Postres de la casa",
+    "descripcion": "Preguntá por nuestra carta de postres.",
+    "precio": null,
+    "orden": 54
+   },
+   {
+    "id": "devils",
+    "categoria": "cocteles",
+    "nombre": "Devils Margarita",
+    "descripcion": "Tequila José Cuervo, Cointreau, lima, pimienta mix, chile y sal cítrica.",
+    "precio": 15000,
+    "orden": 55
+   },
+   {
+    "id": "caipi-mandarin",
+    "categoria": "cocteles",
+    "nombre": "Caipi Mandarin",
+    "descripcion": "Vodka Sernova, Aperol, mandarina, lima machacada, azúcar.",
+    "precio": 14000,
+    "orden": 56
+   },
+   {
+    "id": "pink-tonic",
+    "categoria": "cocteles",
+    "nombre": "Pink Tonic Granero",
+    "descripcion": "Gin Spirito Blu macerado con frutos rojos, tónica, frutillas y menta.",
+    "precio": 15000,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 57
+   },
+   {
+    "id": "granero-amarillo",
+    "categoria": "cocteles",
+    "nombre": "Granero amarillo",
+    "descripcion": "Gin Spirito Blu, limoncello, cordial de lima, tónica.",
+    "precio": 15000,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 58
+   },
+   {
+    "id": "magic-green",
+    "categoria": "cocteles",
+    "nombre": "Magic Green",
+    "descripcion": "Gin Blu, licor de manzanas verdes, piña y vainilla, coco tostado, burbujas.",
+    "precio": 15000,
+    "orden": 59
+   },
+   {
+    "id": "tiki-colada",
+    "categoria": "cocteles",
+    "nombre": "Tiki Granero Colada",
+    "descripcion": "Cointreau, ron Havana Silver, Malibu, piña fresca, licor de marraschino.",
+    "precio": 16000,
+    "orden": 60
+   },
+   {
+    "id": "spritz-arandanos",
+    "categoria": "cocteles",
+    "nombre": "Spritz de arándanos",
+    "descripcion": "Aperol macerado con arándano rojo, espumante, soda de naranja.",
+    "precio": 15000,
+    "foto": "img/carta/spritz.webp",
+    "orden": 61
+   },
+   {
+    "id": "chico-estrella",
+    "categoria": "cocteles",
+    "nombre": "Chico Estrella",
+    "descripcion": "Gancia, limoncello, vino blanco, manzana verde, tomillo, ananá, cordial de naranja.",
+    "precio": 14000,
+    "orden": 62
+   },
+   {
+    "id": "sangria-texas",
+    "categoria": "cocteles",
+    "nombre": "Sangría en Texas",
+    "descripcion": "Frutos rojos y tequila, pomelo, frutilla, vino tinto, cordial de lima limón.",
+    "precio": 15000,
+    "orden": 63
+   },
+   {
+    "id": "gran-pasion",
+    "categoria": "cocteles",
+    "nombre": "Gran pasión",
+    "descripcion": "Ron Havana dorado, jarabe de granada, cordial de lima y maracuyá, naranja.",
+    "precio": 14000,
+    "orden": 64
+   },
+   {
+    "id": "cynar-julep",
+    "categoria": "cocteles",
+    "nombre": "Cynar Julep",
+    "descripcion": "Cynar, cordial de pomelo, limón, syrup y menta fresca.",
+    "precio": 13000,
+    "orden": 65
+   },
+   {
+    "id": "negroni",
+    "categoria": "cocteles",
+    "nombre": "Negroni perfecto",
+    "descripcion": "Vermouth Antica Formula, Campari, gin Blu.",
+    "precio": 17000,
+    "orden": 66
+   },
+   {
+    "id": "gold-edition",
+    "categoria": "cocteles",
+    "nombre": "Gold edition",
+    "descripcion": "Martini dry, ron Havana, cordial de limón y miel, maracuyá, perfume de saúco.",
+    "precio": 15000,
+    "orden": 67
+   },
+   {
+    "id": "coquito",
+    "categoria": "cocteles",
+    "nombre": "Coquito",
+    "descripcion": "Malibu, lima machacada, hojas de menta, dash de agua con gas.",
+    "precio": 15000,
+    "foto": "img/carta/coquito.webp",
+    "orden": 68
+   },
+   {
+    "id": "granero-rojo",
+    "categoria": "cocteles",
+    "nombre": "Granero rojo",
+    "descripcion": "Gin Beefeater Pink, licor de saúco, cordial de lima limón, frutos rojos.",
+    "precio": 15000,
+    "etiquetas": [
+     "casa"
+    ],
+    "orden": 69
+   },
+   {
+    "id": "branca-sour",
+    "categoria": "cocteles",
+    "nombre": "Branca Sour",
+    "descripcion": "Fernet Branca, cordial de ananá, lima.",
+    "precio": 13000,
+    "orden": 70
+   },
+   {
+    "id": "branca-cola",
+    "categoria": "cocteles",
+    "nombre": "Branca Cola",
+    "descripcion": "Fernet Branca y gaseosa cola.",
+    "precio": 13000,
+    "orden": 71
+   },
+   {
+    "id": "romeberry",
+    "categoria": "sinalcohol",
+    "nombre": "Mrs. Romeberry's",
+    "descripcion": "Arándanos, agua de miel de romero, almíbar de limón, jengibre, agua gasificada.",
+    "precio": 11000,
+    "foto": "img/carta/romeberry.webp",
+    "orden": 72
+   },
+   {
+    "id": "waldorf",
+    "categoria": "sinalcohol",
+    "nombre": "Waldorf",
+    "descripcion": "Prensado de manzana verde, lemongrass, syrup de anís y canela.",
+    "precio": 11000,
+    "foto": "img/carta/waldorf.webp",
+    "orden": 73
+   },
+   {
+    "id": "tropical-detox",
+    "categoria": "sinalcohol",
+    "nombre": "Tropical Detox",
+    "descripcion": "Maracuyá, lima, menta, albahaca, tónica de miel y jengibre.",
+    "precio": 12000,
+    "foto": "img/carta/detox.webp",
+    "orden": 74
+   },
+   {
+    "id": "soda-pomelo",
+    "categoria": "sinalcohol",
+    "nombre": "Soda casera de pomelo rosado",
+    "descripcion": "500 cc · el litro, $12.000.",
+    "precio": 6500,
+    "orden": 75
+   },
+   {
+    "id": "soda-naranja",
+    "categoria": "sinalcohol",
+    "nombre": "Soda casera de naranja y maracuyá",
+    "descripcion": "500 cc · el litro, $14.000.",
+    "precio": 7500,
+    "orden": 76
+   },
+   {
+    "id": "soda-anana",
+    "categoria": "sinalcohol",
+    "nombre": "Soda casera de ananá y frutillas",
+    "descripcion": "500 cc · el litro, $14.000.",
+    "precio": 7500,
+    "orden": 77
+   },
+   {
+    "id": "limonada",
+    "categoria": "sinalcohol",
+    "nombre": "Limonada clásica o menta y jengibre",
+    "descripcion": "500 cc · el litro, $14.000.",
+    "precio": 8000,
+    "orden": 78
+   },
+   {
+    "id": "limonada-hibiscus",
+    "categoria": "sinalcohol",
+    "nombre": "Limonada antioxidante de hibiscus",
+    "descripcion": "500 cc · el litro, $14.000.",
+    "precio": 8000,
+    "orden": 79
+   },
+   {
+    "id": "limonada-frutos",
+    "categoria": "sinalcohol",
+    "nombre": "Limonada de frutos rojos del sur",
+    "descripcion": "500 cc · el litro, $17.000.",
+    "precio": 9000,
+    "orden": 80
+   },
+   {
+    "id": "agua",
+    "categoria": "sinalcohol",
+    "nombre": "Agua Villavicencio",
+    "descripcion": "",
+    "precio": 5000,
+    "orden": 81
+   },
+   {
+    "id": "pellegrino",
+    "categoria": "sinalcohol",
+    "nombre": "San Pellegrino o Acqua Panna · 750 cc",
+    "descripcion": "",
+    "precio": 9500,
+    "orden": 82
+   },
+   {
+    "id": "gaseosas",
+    "categoria": "sinalcohol",
+    "nombre": "Coca-Cola o Sprite",
+    "descripcion": "Regular, zero o light.",
+    "precio": 5000,
+    "orden": 83
+   },
+   {
+    "id": "grolsch",
+    "categoria": "cervezas",
+    "nombre": "Grolsch tirada · pinta",
+    "descripcion": "Doblemente lupulada. Países Bajos.",
+    "precio": 8000,
+    "etiquetas": [
+     "happy"
+    ],
+    "orden": 84
+   },
+   {
+    "id": "blue-moon",
+    "categoria": "cervezas",
+    "nombre": "Blue Moon tirada · pinta",
+    "descripcion": "De trigo, con cáscara de naranja y cilantro. Denver, Colorado.",
+    "precio": 8000,
+    "etiquetas": [
+     "happy"
+    ],
+    "orden": 85
+   },
+   {
+    "id": "heineken-00",
+    "categoria": "cervezas",
+    "nombre": "Heineken sin alcohol · lata",
+    "descripcion": "",
+    "precio": 7000,
+    "orden": 86
+   },
+   {
+    "id": "carpano",
+    "categoria": "cervezas",
+    "nombre": "Vermouth Carpano",
+    "descripcion": "Con rodaja de naranja y agua con gas. 2x1 por persona, todo el día.",
+    "precio": 13000,
+    "etiquetas": [
+     "happy"
+    ],
+    "orden": 87
+   },
+   {
+    "id": "evento-pasos",
+    "categoria": "eventos",
+    "nombre": "Evento por pasos · por persona + IVA",
+    "descripcion": "Recepción, dos pasos, postre y brindis. Incluye bebida sin alcohol, vino Saint Felicien y un trago en la recepción.",
+    "precio": 135000,
+    "foto": "img/carta/evento.webp",
+    "orden": 88
+   },
+   {
+    "id": "evento-estaciones",
+    "categoria": "eventos",
+    "nombre": "Evento por estaciones · por persona + IVA",
+    "descripcion": "Recepción, quesos, cazuelas, pernil, mesa dulce y brindis. Incluye bebida sin alcohol, vino Saint Felicien y un trago en la recepción.",
+    "precio": 135000,
+    "foto": "img/carta/evento.webp",
+    "orden": 89
+   }
+  ]
+ },
+ "textos": {
+  "tuPedido": "Tu evento",
+  "verPedido": "Ver tu evento",
+  "carritoVacio": "Todavía no armaste ningún evento.",
+  "carritoVacioSub": "Armalo en el granero de la web y aparece acá.",
+  "retiro": "Evento en Granero",
+  "diaRetiro": "Día del evento",
+  "paraCuando": "¿Qué día es el evento?",
+  "coPasoRetiro": "¿Qué día es el evento?",
+  "coElegiDia": "Elegí el día del evento",
+  "franja": "Turno",
+  "anticipacion": "Los eventos se piden con una semana de anticipación",
+  "waPedido": "Hola {negocio}! Quiero pedir presupuesto para este evento:",
+  "waRetira": "Fecha",
+  "waPagoWA": "a coordinar con el local",
+  "enviarPedido": "Pedir presupuesto",
+  "pedidoListo": "¡Pedido enviado!",
+  "pedidoListoSub": "Tu código es {codigo}. Granero lo ve en su panel y te escribe por WhatsApp con el presupuesto.",
+  "notaPedido": "Contanos qué festejan (cumpleaños, empresa, casamiento…)",
+  "reservarMesa": "Reservá tu mesa en el granero",
+  "seguir": "Seguir mirando"
+ },
+ "demoVersion": 1
+}
