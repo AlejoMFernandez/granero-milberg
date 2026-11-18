@@ -24,11 +24,12 @@
   if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&location.hash!=='#sin-intro')d.classList.add('con-intro');})();
 </script>
 <link rel="preload" href="fonts/oswald-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/logo-claro.webp" as="image" fetchpriority="high">
 <link rel="preload" href="fonts/karla-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" as="image" href="img/noche-560.webp" imagesrcset="img/noche-560.webp 560w, img/noche-960.webp 960w" imagesizes="(min-width:768px) 34vw, 100vw" fetchpriority="high">
 <link rel="stylesheet" href="kit/kit.css?v=1">
 <link rel="stylesheet" href="css/fuentes.css?v=1" data-kit-fuentes>
-<link rel="stylesheet" href="css/site.css?v=1">
+<link rel="stylesheet" href="css/site.css?v=6">
 </head>
 <body>
 
@@ -260,6 +261,7 @@
       <h3 class="cartelito__t" id="ct-t" data-tit></h3>
       <ul class="cartelito__l" data-lista></ul>
       <p class="cartelito__inc">Incluye bebida sin alcohol, vino Saint Felicien y un trago en la recepción.</p>
+      <div class="cartelito__nav"><button type="button" data-ev-ant aria-label="Paso anterior">←</button><span data-ev-pos>1 de 5</span><button type="button" data-ev-sig aria-label="Paso siguiente">→</button></div>
     </div>
   </div>
 
@@ -335,6 +337,6 @@
   <p class="credito">Sitio desarrollado por <a href="https://alejomfernandez.com.ar" target="_blank" rel="noopener">Alejo Martín Fernández</a></p>
 </footer>
 
-<script type="module" src="js/site.js?v=1"></script>
+<script type="module" src="js/site.js?v=2"></script>
 </body>
 </html>

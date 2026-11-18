@@ -65,7 +65,15 @@ const MOM = [
       tablones.forEach(t => $$('picture', t).forEach((img, k) => img.classList.toggle('ver', k === i)));
       escribir(i, animar && !quieto); return;
     }
-    tablones.forEach((t, ti) => {
+    if (celu.matches) {
+      // celu: la foto nueva sube como una persiana, tabla por tabla (sin cuadro negro)
+      tablones.forEach(t => {
+        const ps = $$('picture', t);
+        ps.forEach((img, k) => { img.classList.remove('entra', 'antes'); if (img.classList.contains('ver') && k !== i) { img.classList.remove('ver'); img.classList.add('antes'); } });
+        void t.offsetWidth; ps[i].classList.add('ver', 'entra');
+        setTimeout(() => ps.forEach(img => { if (img !== ps[i]) img.classList.remove('antes'); }), 900);
+      });
+    } else tablones.forEach((t, ti) => {
       t.classList.remove('gira'); void t.offsetWidth; t.classList.add('gira');
       setTimeout(() => $$('picture', t).forEach((img, k) => img.classList.toggle('ver', k === i)), ti * 90 + 320);
     });
@@ -313,7 +321,7 @@ const kit = await initKit({
       { c: 'Quesos', s: 'Estación', t: 'Degustación de quesos', l: ['Mordier, Atuel y azul', 'Gruyere, Reggiano y sardo', 'Con panes caseros'] },
       { c: 'Cazuelas', s: 'Paso 1', t: 'Cazuelas', l: ['Risotto de langostinos', 'Risotto de lomo braseado', 'Ñoquis de espinaca, pomodoro y crema de hongos'] },
       { c: 'Pernil', s: 'Paso 2', t: 'Pernil y sándwiches', l: ['Pernil de cerdo con salsas y panes caseros', 'Mini sándwiches de bife de chorizo Angus'] },
-      { c: 'Mesa dulce', s: 'Paso 3', t: 'Mesa dulce', l: ['Pinchos frutales', 'Panqueques con crema helada', 'Flan casero', 'Shots de lemon pie, tiramisú y mousse'] },
+      { c: 'Dulces', s: 'Paso 3', t: 'Mesa dulce', l: ['Pinchos frutales', 'Panqueques con crema helada', 'Flan casero', 'Shots de lemon pie, tiramisú y mousse'] },
       { c: 'Brindis', s: 'Paso 4', t: 'Brindis', l: BRINDIS },
     ],
   };
@@ -373,7 +381,11 @@ const kit = await initKit({
     $('[data-paso-ev]', pop).textContent = m.s;
     $('[data-tit]', pop).textContent = m.t;
     $('[data-lista]', pop).innerHTML = m.l.map(x => `<li>${esc2(x)}</li>`).join('');
-    pop.hidden = false; pop.style.animation = 'none'; void pop.offsetWidth; pop.style.animation = '';
+    const n = MENUS[st.modo].length;
+    $('[data-ev-pos]', pop).textContent = `${i + 1} de ${n}`;
+    $('[data-ev-ant]', pop).disabled = i === 0; $('[data-ev-sig]', pop).disabled = i === n - 1;
+    $('[data-lista]', pop).scrollTop = 0;
+    if (pop.hidden) { pop.hidden = false; pop.style.animation = 'none'; void pop.offsetWidth; pop.style.animation = ''; }
     escE.classList.add('quieto');
   }
   function cerrar() {
@@ -382,6 +394,8 @@ const kit = await initKit({
     $$('.cartel', capa).forEach(b => b.setAttribute('aria-expanded', 'false'));
   }
   $('.cartelito__x', pop).addEventListener('click', cerrar);
+  $('[data-ev-ant]', pop).addEventListener('click', () => st.abierto > 0 && abrir(st.abierto - 1));
+  $('[data-ev-sig]', pop).addEventListener('click', () => st.abierto < MENUS[st.modo].length - 1 && abrir(st.abierto + 1));
   pop.addEventListener('click', e => e.stopPropagation());
   document.addEventListener('click', e => { if (!e.target.closest('.cartel')) cerrar(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') cerrar(); });

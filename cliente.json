@@ -1012,7 +1012,8 @@
   "pedidoListoSub": "Tu código es {codigo}. Granero lo ve en su panel y te escribe por WhatsApp con el presupuesto.",
   "notaPedido": "Contanos qué festejan (cumpleaños, empresa, casamiento…)",
   "reservarMesa": "Reservá tu mesa en el granero",
-  "seguir": "Seguir mirando"
+  "seguir": "Seguir mirando",
+  "total": "Total + IVA"
  },
  "demoVersion": 1
 }
